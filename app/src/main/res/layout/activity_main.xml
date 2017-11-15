@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="@dimen/activity_horizontal_margin"
     tools:context=".MainActivity">
-    <LinearLayout android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/activity_horizontal_margin"
-        tools:context=".MainActivity">
+        android:padding="16dp"
+        tools:context=".Controller.MainActivity">
 
         <TextView
             android:layout_width="wrap_content"
@@ -18,82 +19,82 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="@dimen/header_margin"
             android:text="@string/settings_title"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/name_label"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:text="@string/name_label"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
             android:id="@+id/userNameInput"
-            android:hint="@string/name_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/name_hint" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/dob_label"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:text="@string/dob_label"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <DatePicker
             android:id="@+id/dateOfBirthInput"
-            android:inputType="text|date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
+            android:layout_gravity="center_horizontal"
             android:calendarViewShown="false"
-            android:layout_gravity="center_horizontal"/>
+            android:datePickerMode="spinner"
+            android:inputType="text|date" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/email_label"
             android:layout_marginTop="@dimen/activity_vertical_margin_small"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:text="@string/email_label"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
             android:id="@+id/emailInput"
-            android:hint="@string/email_hint"
-            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin">
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/saveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/buttonTextSize"
-                android:text="@string/save"
-                android:onClick="onSaveClick"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+                android:text="@string/save"
+                android:textSize="@dimen/buttonTextSize" />
 
             <Button
                 android:id="@+id/revertButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/buttonTextSize"
-                android:onClick="onRevertClick"
+                android:layout_gravity="center_horizontal"
+
                 android:text="@string/revert"
-                android:layout_gravity="center_horizontal"/>
+                android:textSize="@dimen/buttonTextSize" />
 
         </LinearLayout>
 

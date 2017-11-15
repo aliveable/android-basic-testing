@@ -8,4 +8,8 @@
     <string name="revert">Revert</string>
     <string name="name_hint">Enter your name</string>
     <string name="email_hint">Enter your Email</string>
+    <string name="EmptyName">Name should not be empty input.</string>
+    <string name="NameOnlyEnglish">Name can be only english language.</string>
+    <string name="EmailEmpty">Email should not be empty input.</string>
+    <string name="EmailIsWrong">Email format is wrong.</string>
 </resources>
