@@ -41,8 +41,8 @@ public class MainactTest {
     public void saveCorrectlyTest() {
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.revertButton)).perform(scrollTo(), click());
-        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Boonyarith"));
-        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("admin@hotmail.com"));
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("ALIVEABLE"));
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("test@testmail.com"));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
     }
 
@@ -51,7 +51,7 @@ public class MainactTest {
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.revertButton)).perform(scrollTo(), click());
         onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText(""));
-        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("admin@hotmail.com"));
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("test@testmail.com"));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText(App.getContext().getString(R.string.EmptyName))).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
@@ -61,7 +61,7 @@ public class MainactTest {
     public void saveEmptyEmail() {
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.revertButton)).perform(scrollTo(), click());
-        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Boonyarith"));
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("aliveable"));
         onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText(""));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText(App.getContext().getString(R.string.EmailEmpty))).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
@@ -71,8 +71,8 @@ public class MainactTest {
     public void saveWrongName() {
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.revertButton)).perform(scrollTo(), click());
-        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("ประยุทธิ์ 5555 (9 ovo)9"));
-        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("admin@hotmail.com"));
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("ประยุทธิ์  จันโอชุ (9 sdfo)9"));
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("test@testmail.com"));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText(App.getContext().getString(R.string.NameOnlyEnglish))).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
@@ -81,8 +81,8 @@ public class MainactTest {
     public void saveWrongEmail() {
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.revertButton)).perform(scrollTo(), click());
-        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Boonyarith"));
-        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("gmailasfd4738com"));
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Aliveable"));
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("testtestmailcom"));
         onView(withId(R.id.saveButton)).perform(scrollTo(), click());
         onView(withText(App.getContext().getString(R.string.EmailIsWrong))).inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
